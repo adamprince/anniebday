@@ -89,6 +89,8 @@ h1, p {
   left: 2vw;
 }
 .modal-trigger--message {
+  background-image: url(joni.jpg);
+  background-size: 137% 137%;
   top: 2vw;
   right: 2vw;
   animation: rotation 10s infinite linear;
