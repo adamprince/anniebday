@@ -122,6 +122,12 @@ h1, p {
   height: 50vh;
   border: 2px solid var(--font-color);
   transition: transform 0.5s;
+  animation: fade 20s infinite;
+}
+@keyframes fade {
+  0%   { opacity: 1; }
+  50%  { opacity: 0; }
+  100% { opacity: 1; }
 }
 @media only screen and (max-width: 768px) {
   #inner {
