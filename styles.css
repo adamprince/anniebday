@@ -111,6 +111,11 @@ a.close-modal-btn {
   border: 2px solid var(--font-color);
   transition: transform 0.5s;
 }
+@media only screen and (max-width: 600px) {
+  #inner {
+    height: 30vh;
+  }
+}
 
 .transform {
   letter-spacing: .15rem;
