@@ -39,6 +39,10 @@ a.close-modal-btn {
   top: 2vw;
   right: 2vw;
 }
+h1, p {
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
 .content {
   display: grid;
   grid-gap: 2rem;
@@ -82,11 +86,20 @@ a.close-modal-btn {
 }
 .modal-trigger--video {
   top: 2vw;
-  right: 2vw;
+  left: 2vw;
 }
 .modal-trigger--message {
   top: 2vw;
-  left: 2vw;
+  right: 2vw;
+  animation: rotation 10s infinite linear;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 .modal-trigger--picture {
   bottom: 2vw;
@@ -139,4 +152,49 @@ a.close-modal-btn {
 .transform--bottom {
   bottom: 2vw;
   transform: rotate(-180deg);
+}
+
+/* Styles for the modal container */
+.modal-container {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transition: opacity 0.3s ease; /* You can adjust the transition property as needed */
+  opacity: 0; /* Start with opacity set to 0 */
+  z-index: 999;
+}
+
+/* Styles for the modal content */
+.modal-content {
+  font-size: clamp(1.5rem, -0.875rem + 8.333vw, 3.5rem);
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--font-color);
+  color: var(--bg-color);
+  padding: 2vw;
+  box-sizing: border-box;
+  transition: transform 0.3s ease; /* You can adjust the transition property as needed */
+  transform: translateY(100%); /* Start with the modal content below the viewport */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-message {
+  max-width: 80vw;
+  margin: 0 auto;
+}
+
+/* Close button style */
+.close-button {
+  position: absolute;
+  top: 2vw;
+  right: 2vw;
+  cursor: pointer;
 }
