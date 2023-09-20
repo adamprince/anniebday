@@ -1,0 +1,121 @@
+:root {
+  --bg-color: #003f3f;
+  --font-color: #FFFFDB;
+  --interactive-color: inherit;
+}
+body {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: clamp(2rem, -0.875rem + 12.333vw, 4.5rem);
+  line-height: 1.2;
+  text-align: center;
+
+  /* Full screen width and height */
+  width: 100%;
+  min-height: 100vh;
+
+  /* Centers the container in the middle of the screen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a {
+  color: var(--interactive-color);
+  display: block;
+  transition: font-variation-settings 0.2s ease 0s, text-decoration-thickness 0.2s ease 0s, font-weight 0.2s ease 0s;
+}
+a:hover {
+  cursor: pointer;
+  filter: url(#noise);
+}
+a.close-modal-btn {
+  animation: none;
+  font-family: 'Noto Sans Egyptian Hieroglyphs', sans-serif;
+  font-size: 72px;
+  position: absolute;
+  overflow: hidden;
+  z-index: 2;
+  top: 2vw;
+  right: 2vw;
+}
+.content {
+  max-width: 80vw;
+  display: grid;
+  justify-content: center;
+  grid-gap: 2rem;
+}
+/* fun shit */
+#background-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0.15;
+}
+.bungee {
+  font-family: 'Bungee Shade', cursive;
+  display: block;
+}
+.script {
+  font-family: 'Pinyon Script', cursive;
+  display: block;
+}
+.modal-trigger {
+  background-color: var(--font-color);
+  border-radius: 50px;
+  box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+  color: var(--bg-color);
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  font-family: 'Noto Color Emoji', sans-serif;
+  font-size: 36px;
+  line-height: 36px;
+  position: fixed;
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+  z-index: 2;
+}
+.modal-trigger--video {
+  top: 2vw;
+  right: 2vw;
+}
+.modal-trigger--message {
+  top: 2vw;
+  left: 2vw;
+}
+.modal-trigger--picture {
+  bottom: 2vw;
+  right: 2vw;
+}
+.modal-trigger--sound {
+  bottom: 2vw;
+  left: 2vw;
+}
+
+#container {
+  perspective: 25px;
+  display: grid;
+  justify-content: center;
+}
+#inner {
+  background: url(https://lh3.googleusercontent.com/drive-viewer/AITFw-zfLWpqn3whEoLbpLqjGXapoaN2SVwyXTKui7MOUM2d2k7dH6QXSSuGBKnFvnxqsDY4iOjjX1Xz0D3PHbJJJKzxvVWqXw=s1600) no-repeat center center;
+  background-size: cover;
+  width: 200px;
+  height: 300px;
+  border: 2px solid white;
+  transition: transform 0.5s;
+}
