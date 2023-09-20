@@ -40,10 +40,10 @@ a.close-modal-btn {
   right: 2vw;
 }
 .content {
-  max-width: 80vw;
   display: grid;
-  justify-content: center;
   grid-gap: 2rem;
+  grid-template-columns: 80vw;
+  justify-items: center;
 }
 /* fun shit */
 #background-video {
@@ -68,6 +68,10 @@ a.close-modal-btn {
 }
 .modal-trigger {
   background-color: var(--font-color);
+  background-image: url(Acid_Smiley.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
   border-radius: 50px;
   box-shadow:
     0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -112,10 +116,10 @@ a.close-modal-btn {
   justify-content: center;
 }
 #inner {
-  background: url(https://lh3.googleusercontent.com/drive-viewer/AITFw-zfLWpqn3whEoLbpLqjGXapoaN2SVwyXTKui7MOUM2d2k7dH6QXSSuGBKnFvnxqsDY4iOjjX1Xz0D3PHbJJJKzxvVWqXw=s1600) no-repeat center center;
+  background: url(bg-image.jpg) no-repeat center center;
   background-size: cover;
   width: 200px;
   height: 300px;
-  border: 2px solid white;
+  border: 2px solid var(--font-color);
   transition: transform 0.5s;
 }

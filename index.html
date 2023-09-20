@@ -11,18 +11,14 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <audio id="music" autoplay loop>
-    <source src="bg-music.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
-  </audio>
   <video id="background-video" autoplay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
     <source src="cloud-loop.mp4" type="video/mp4">
   </video>
 
-  <a class="modal-trigger modal-trigger--video">𓄀</a>
-  <a class="modal-trigger modal-trigger--message">𓄀</a>
-  <a class="modal-trigger modal-trigger--picture">𓄀</a>
-  <a class="modal-trigger modal-trigger--sound">𓄀</a>
+  <a class="modal-trigger modal-trigger--video"></a>
+  <a class="modal-trigger modal-trigger--message"></a>
+  <a class="modal-trigger modal-trigger--picture"></a>
+  <a class="modal-trigger modal-trigger--sound"></a>
 
   <main class="content">
     <div class="bungee">Happy Birthday</div>
@@ -30,6 +26,10 @@
       <div id="inner"></div>
     </div>
     <div class="script">Annemarie</div>
+    <audio id="music" controls autoplay loop>
+      <source src="bg-music.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
   </main>
 
   <svg viewBox="0 0 180 100" class="fx-noise" aria-hidden="true" style="width: 0; height: 0; visibility: hidden;">
