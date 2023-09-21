@@ -36,8 +36,8 @@ a.close-modal-btn {
   position: absolute;
   overflow: hidden;
   z-index: 2;
-  top: 2vw;
-  right: 2vw;
+  top: 24px;
+  right: 24px;
 }
 h1, p {
   margin-bottom: 1.5rem;
@@ -50,18 +50,14 @@ h1, p {
   justify-items: center;
 }
 /* fun shit */
-#background-video {
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
   opacity: 0.25;
-}
-video {
-  width: 100%;
-  height: auto;
 }
 .script {
   font-family: 'Pinyon Script', cursive;
@@ -86,14 +82,14 @@ video {
   }
 }
 .modal-trigger--video {
-  top: 2vw;
-  left: 2vw;
+  top: 24px;
+  left: 24px;
 }
 .modal-trigger--message {
   background-image: url(joni.jpg);
   background-size: 137% 137%;
-  top: 2vw;
-  right: 2vw;
+  top: 24px;
+  right: 24px;
   animation: rotation 10s infinite linear;
 }
 @keyframes rotation {
@@ -105,12 +101,12 @@ video {
   }
 }
 .modal-trigger--picture {
-  bottom: 2vw;
-  right: 2vw;
+  bottom: 24px;
+  right: 24px;
 }
 .modal-trigger--sound {
-  bottom: 2vw;
-  left: 2vw;
+  bottom: 24px;
+  left: 24px;
 }
 
 #container {
@@ -144,22 +140,22 @@ video {
   text-transform: uppercase;
 }
 .transform--top {
-  top: 2vw;
+  top: 24px;
 }
 .transform--left {
   transform-origin: top left;
-  left: 2vw;
+  left: 24px;
   top: 50%;
   transform: rotate(-90deg) translateX(-50%);
 }
 .transform--right {
   transform-origin: top right;
-  right: 2vw;
+  right: 24px;
   top: 50%;
   transform: rotate(90deg) translateX(50%);
 }
 .transform--bottom {
-  bottom: 2vw;
+  bottom: 24px;
   transform: rotate(-180deg);
 }
 
@@ -186,7 +182,7 @@ video {
   height: 100vh;
   background-color: var(--font-color);
   color: var(--bg-color);
-  padding: 2vw;
+  padding: 24px;
   box-sizing: border-box;
   transition: transform 0.3s ease; /* You can adjust the transition property as needed */
   transform: translateY(100%); /* Start with the modal content below the viewport */
@@ -203,7 +199,17 @@ video {
 /* Close button style */
 .close-button {
   position: absolute;
-  top: 2vw;
-  right: 2vw;
+  top: 24px;
+  right: 24px;
   cursor: pointer;
+  box-sizing: content-box;
+  width: 1em;
+  height: 1em;
+  padding: 0.25em 0.25em;
+  color: var(--bg-color);
+  background: transparent url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,63,63,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M8 8 L24 24 M8 24 L24 8'/%3E%3C/svg%3E") center/1em auto no-repeat;
+  border: 0;
+
+  padding: 0.5rem 0.5rem;
+  margin: -0.5rem -0.5rem -0.5rem auto;
 }
